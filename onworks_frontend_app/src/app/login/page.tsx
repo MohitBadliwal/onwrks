@@ -1,16 +1,16 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
+
 // import { useAuth } from "@/context/AuthContext";
 import { useState } from "react";
-// import { FcGoogle } from "react-icons/fc";
-// import { IoLogoApple, IoMdEye, IoMdEyeOff } from "react-icons/io";
+import { FcGoogle } from "react-icons/fc";
+import { IoLogoApple, IoMdEye, IoMdEyeOff } from "react-icons/io";
 import Image from "next/image";
 // import { useForm } from "react-hook-form";
 import { z } from "zod";
 // import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
-// import { FaUser } from "react-icons/fa";
-// import { RiLockPasswordFill } from "react-icons/ri";
+import { FaUser } from "react-icons/fa";
+import { RiLockPasswordFill } from "react-icons/ri";
 const loginSchema = z.object({
   username: z.string().min(2, "Full Name must be at least 2 characters"),
   password: z
@@ -140,7 +140,7 @@ export default function AdminLoginPage() {
             <div>
               <div className="mb-5 h-10 relative">
                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg">
-                  {/* <FaUser /> */}
+                  <FaUser />
                 </span>
                 <input
                   type="text"
@@ -157,7 +157,7 @@ export default function AdminLoginPage() {
               )} */}
               <div className="mb-5 h-10 relative">
                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg">
-                  {/* <RiLockPasswordFill /> */}
+                  <RiLockPasswordFill />
                 </span>
                 <input
                   type={showPassword ? "text" : "password"}
@@ -170,7 +170,7 @@ export default function AdminLoginPage() {
                   onClick={() => setShowPassword((prev) => !prev)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-600 text-lg cursor-pointer"
                 >
-                  {/* {showPassword ? <IoMdEyeOff /> : <IoMdEye />} */}
+                  {showPassword ? <IoMdEyeOff /> : <IoMdEye />}
                 </button>
               </div>
 
@@ -202,14 +202,14 @@ export default function AdminLoginPage() {
                 type="button"
                 className="w-full px-4 py-1 text-xs border cursor-pointer border-gray-300 rounded-lg bg-white font-medium flex items-center justify-center gap-2 transition duration-200 hover:bg-gray-100 hover:shadow-sm"
               >
-                {/* <FcGoogle size={20} /> */}
+                <FcGoogle size={20} />
                  Login with Google
               </button>
               <button
                 type="button"
                 className="w-full px-4 py-1 text-xs border cursor-pointer border-gray-300 rounded-lg bg-white font-medium flex items-center justify-center gap-2 transition duration-200 hover:bg-gray-100 hover:shadow-sm"
               >
-                {/* <IoLogoApple size={25} /> */}
+                <IoLogoApple size={25} />
                  Login with Apple
               </button>
             </div>
@@ -219,7 +219,7 @@ export default function AdminLoginPage() {
             Don’t have an account?{" "}
             <a
               href="#"
-              className="text-[#2f3b52] font-medium hover:underline transition"
+              className="text-[#f37d09] font-medium hover:underline transition "
               onClick={() => router.push(`/register`)}
             >
               Register Now
